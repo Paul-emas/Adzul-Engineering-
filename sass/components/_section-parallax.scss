@@ -1,0 +1,48 @@
+.section-parallax {
+    margin-top: 10rem;
+    padding-top: 15rem;
+    padding-bottom: 30rem;
+    background-image:  linear-gradient(rgba($color-secondary, .8));        
+    display: flex;
+    justify-content: space-around;
+
+    @include respond(phone) {
+        padding-top: 5rem;
+        padding-bottom: 25rem;
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+        @include absCenter;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
+
+        & h2 {
+            font-size: 5rem;
+            color: $color-primary;
+            margin-bottom: 1rem;
+
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
+        }
+
+        & p {
+            text-align: center;
+            color: $color-white;
+            font-size: 1.6rem;
+            width: 80%;
+            position: relative !important;
+            margin-bottom: 3rem;
+            @include absCenter;
+
+            @include respond(tab-port) {
+                font-size: 1.3rem;
+                width: 90%;
+            }
+        }
+    }
+}
